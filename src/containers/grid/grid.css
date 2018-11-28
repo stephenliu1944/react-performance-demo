@@ -1,0 +1,5 @@
+.grid{
+    height: 600px;
+    overflow-y: scroll;
+    border: 0;
+}

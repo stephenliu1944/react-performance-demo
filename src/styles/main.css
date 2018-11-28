@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body, button, input, select, textarea {
+    font: 12px/1.5 "Microsoft Yahei","PingFang SC",Helvetica,Arial,Simsun,sans-serif;
+}
+*, :after, :before {
+    box-sizing: border-box;
+}
+
+:global(.hidden){
+    visibility: hidden;
+}

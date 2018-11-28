@@ -1,0 +1,7 @@
+.column{
+    display: inline-block;
+    width: 10%;
+}
+.column div{
+    margin-left: 5px;
+}

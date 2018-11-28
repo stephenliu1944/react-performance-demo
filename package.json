@@ -1,0 +1,66 @@
+{
+  "name": "react-performance-demo",
+  "version": "1.0.0",
+  "scripts": {
+    "build:dev": "webpack --config webpack.config.dev.babel.js --colors --display-error-details",
+    "build:prod": "webpack --config webpack.config.prod.babel.js --colors --display-error-details",
+    "package": "npm run build:prod && gulp zip",
+    "lint": "eslint -c .eslintrc.json --ext .js,.jsx src/",
+    "start": "webpack-dev-server --config webpack.config.dev.babel.js --colors",
+    "start:test": "concurrently \"cross-env npm start\" \"node ./websocket/server.js\""
+  },
+  "license": "ISC",
+  "dependencies": {
+    "babel-runtime": "^6.23.0",
+    "core-js": "^2.5.7",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "socket.io": "^2.1.1",
+    "socket.io-client": "^2.1.1",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.7.2",
+    "babel-core": "^6.22.1",
+    "babel-eslint": "^7.1.1",
+    "babel-loader": "^6.2.10",
+    "babel-plugin-transform-runtime": "^6.22.0",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-react": "^6.22.0",
+    "babel-preset-stage-0": "^6.22.0",
+    "clean-webpack-plugin": "^0.1.15",
+    "concurrently": "^3.5.0",
+    "copy-webpack-plugin": "^4.0.1",
+    "cross-env": "^5.0.5",
+    "css-loader": "^0.26.1",
+    "del": "^2.2.2",
+    "eslint": "^3.17.1",
+    "eslint-loader": "^1.6.3",
+    "eslint-plugin-react": "^6.10.0",
+    "extract-text-webpack-plugin": "^2.0.0-rc.3",
+    "file-loader": "^0.10.0",
+    "gulp": "^3.9.1",
+    "gulp-sftp": "^0.1.5",
+    "gulp-zip": "^4.0.0",
+    "html-webpack-plugin": "^2.28.0",
+    "postcss-loader": "^1.2.2",
+    "pre-commit": "^1.2.2",
+    "react-addons-perf": "^15.4.2",
+    "style-loader": "^0.13.1",
+    "uglifyjs-webpack-plugin": "^0.2.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^2.3.2",
+    "webpack-dev-server": "^2.3.0",
+    "webpack-merge": "^4.1.0"
+  },
+  "pre-commit": [
+    "lint"
+  ],
+  "devServer": {
+    "port": 8080
+  },
+  "webSocket": {
+    "port": 3000
+  },
+  "packageName": "react-node-websocket-demo"
+}
